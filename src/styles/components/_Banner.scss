@@ -1,0 +1,133 @@
+.banner_container1 {
+    max-width: 1440px;
+    position: relative;
+    height: 180px;
+    margin: 30px 60px;
+    @include flexCenter;
+    -webkit-animation: SHOW-BOX 2s ease-in-out;
+    -moz-animation: SHOW-BOX 2s ease-in-out;
+    -o-animation: SHOW-BOX 2s ease-in-out;
+    animation: SHOW-BOX 2s ease;
+    &::before {
+        content:"";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url(../../img/Banniere-accueil.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        filter: brightness(70%);
+        border-radius: 25px;
+    }
+    p {
+        z-index: 2;
+        color: $color-white;
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 68px;
+    }
+}
+
+.banner_container6 {
+    position: relative;
+    height: 200px;
+    margin: 30px 60px 20px;
+    @include flexCenter;
+    -webkit-animation: SHOW-BOX 2s ease;
+    -moz-animation: SHOW-BOX 2s ease;
+    -o-animation: SHOW-BOX 2s ease;
+    animation: SHOW-BOX 2s ease;
+    &::before {
+        content:"";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url(../../img/Banniere-apropos.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        filter: brightness(70%);
+        border-radius: 25px;
+    }
+    p {
+        display: none;
+    }
+}
+
+
+// -------------------  Responsive ----------------------
+
+// --- Breakpoint 992px ---
+@media (max-width: 992px) {
+    .banner_container1 {
+        height: 165px;
+        margin: 30px;
+        &::before {
+            border-radius: 22px;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .banner_container29 {
+        height: 220px;
+        margin: 30px;
+        &::before {
+            border-radius: 22px;
+        }
+    }
+}
+
+// --- Breakpoint 768px ---
+@media (max-width: 768px) {
+    .banner_container1 {
+        height: 150px;
+        margin: 20px;
+        &::before {
+            border-radius: 18px;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+    }
+    .banner_container6 {
+        height: 250px;
+        margin: 20px;
+        &::before {
+            border-radius: 18px;
+        }
+    }
+}
+
+// --- Breakpoint 576px ---
+@media (max-width: 576px) {
+    .banner_container1 {
+        height: 110px;
+        margin: 15px;
+        display: flex;
+        justify-content: flex-start;
+        &::before {
+            border-radius: 10px;
+        }
+        p {
+            margin-left: 10px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .banner_container6 {
+        height: 265px;
+        margin: 15px;
+        &::before {
+            border-radius: 10px;
+            background: url(../../img/Banniere-apropos2.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: none;
+        }
+    }
+}

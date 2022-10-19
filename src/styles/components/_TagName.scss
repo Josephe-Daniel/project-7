@@ -1,0 +1,32 @@
+.tag_item {
+    @include flexCenter;
+    background-color: $color-salmon;
+    color: $color-white;
+    border-radius: 20px;
+    padding: 3px 25px;
+    margin: 10px 10px 0 0;
+    -webkit-animation: slide-in-elliptic-left-fwd 2.5s ease;
+    -moz-animation: slide-in-elliptic-left-fwd 2.5s ease;
+    -o-animation: slide-in-elliptic-left-fwd 2.5s ease;
+    animation: slide-in-elliptic-left-fwd 2.5s ease;
+}
+
+// -------------------  Responsive ----------------------
+
+// Breakpoint 768px
+@media (max-width: 768px) {
+    .tag_item {
+        padding: 3px 15px;
+        margin: 10px 5px 0 0;
+        font-size: 0.9rem;
+    }
+}
+
+// Breakpoint 576 px
+@media (max-width: 576px) {
+    .tag_item {
+        padding: 3px 10px;
+        margin: 8px 3px 0 0;
+        font-size: 0.7rem;
+    }
+}

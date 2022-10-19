@@ -1,0 +1,60 @@
+.error_block {
+    width: 92%;
+    margin: 100px auto 0;
+    @include flexCenter;
+    flex-direction: column;
+    color: $color-salmon;
+    -webkit-animation: SHOW-BOX 2s ease-in-out;
+    -moz-animation: SHOW-BOX 2s ease-in-out;
+    -o-animation: SHOW-BOX 2s ease-in-out;
+    animation: SHOW-BOX 2s ease;
+    .error_container {
+        @include flexCenter;
+        flex-direction: column;
+        margin-bottom: 150px;
+        .error_number {
+            font-size: 14rem;
+            font-weight: 900;
+        }
+        .error_message {
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+            @include flexCenter;
+        }
+    }
+    .error_link {
+        color: $color-salmon;
+        text-decoration: underline;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .error_block .error_container {
+        .error_number {
+            font-size: 10rem;
+        }
+        .error_message {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .error_block .error_container {
+        .error_number {
+            font-size: 8rem;
+        }
+        .error_message {
+            font-size: 1.2rem;
+        }
+    }
+    .error_link {
+        text-align: center;
+    }
+}
